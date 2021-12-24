@@ -1,7 +1,6 @@
 .DS_Store
-__pycache__/
+**/__pycache__/
 configuration.cfg
-db_coinslist.json
-db_coinstore.json
-run.log
+*.json
+*.log
 newcoinbot/

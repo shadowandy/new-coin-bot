@@ -43,7 +43,7 @@ description_trim         : 1000
 Once everything is configured. You can simply trigger the bot to run by using the following command.
 
 ```
-python 3 main.py
+python3 main.py
 ```
 
 To run it periodically, you will have to make use of scheduler like crontab. For example, running at the 6th, 26th and 46th minute of the hour. You can do the following:

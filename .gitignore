@@ -3,4 +3,5 @@ __pycache__/
 configuration.cfg
 db_coinslist.json
 db_coinstore.json
+run.log
 newcoinbot/

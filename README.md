@@ -1,5 +1,7 @@
 # New Coin Bot
 
+![display](ncb-picture01.png)
+
 Monitors for newly coins or tokens listed on CoinGecko and pushes out via Telegram and/or command line.
 
 # Installation

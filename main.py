@@ -114,8 +114,8 @@ def main():
         new_coins = [id for coin in coins_diff for id in coin]
 
         for coin_id in new_coins:
-            logger.info(f'Identifying new coin - {coin_id}')
             if coin_id not in coin_store:
+                logger.info(f'Identifying new coin - {coin_id}')
                 coin_detail = cg.get_coin_by_id(coin_id)
                 coin_table.append(parsecoin(coin_detail))
                 coin_store.append(parsecoin(coin_detail, 'JSON'))

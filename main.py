@@ -119,7 +119,8 @@ def main():
                 coin_detail = cg.get_coin_by_id(coin_id)
                 coin_table.append(parsecoin(coin_detail))
                 coin_store.append(parsecoin(coin_detail, 'JSON'))
-                telegram_bot_sendcoin(coin_detail)
+                if config.enable_telegram:
+                    telegram_bot_sendcoin(coin_detail)
                 time.sleep(float(config.delay))
 
         # Saving it for the next run

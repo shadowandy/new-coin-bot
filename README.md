@@ -33,6 +33,7 @@ refresh_interval_minutes : 10
 save_interval_minutes    : 30
 
 [telegram]
+enable_telegram          : false
 token                    : <telegram_bot_token>
 chatid                   : <telegram chat_id>
 description_trim         : 1000

@@ -22,6 +22,15 @@ pip3 install -r requirements.txt
 
 In order to use Telegram notification, you will have to sign up for a Telegram bot. You can easily Google for the instructions to do so. You will need to identify the chatid for the Telegram bot to push updates to.
 
+To start configuring the bot
+
+```
+cd ~/new-coin-bot
+nano configuration.cfg
+```
+
+Within the `configuration.cfg`, paste the following contents and edit it to reflect your desired settings.
+
 ```cfg
 [base]
 console_logs             : false

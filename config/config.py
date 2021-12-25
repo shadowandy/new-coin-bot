@@ -37,6 +37,10 @@ class Config:
         return self._conf.get('base', 'coins_store', fallback=None)
 
     @property
+    def enable_telegram(self):
+        return self._conf.getboolean('telegram', 'enable_telegram', fallback=False)
+
+    @property
     def telegram_token(self):
         return self._conf.get('telegram', 'token', fallback=None)
 

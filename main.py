@@ -53,7 +53,7 @@ def telegram_bot_sendcoin(coin_detail):
     if len(description) > trim:
         description = description[:trim] + f' ...'
     description = urllib.parse.quote(description)
-    message = f"*{coin['name']} ({coin['network']})*\n*Categories:* {coin['categories']}\n\n*Links:* [CoinGecko]({coin['url']}), [Homepage]({coin['homepage']})\n*Price:* US${coin['price']}\n*Desc:* {description}"
+    message = f"*{coin['name']} ({coin['network']})*\n\n*Categories:* {coin['categories']}\n*Links:* [CoinGecko]({coin['url']}), [Homepage]({coin['homepage']})\n*Price:* US${coin['price']}\n*Desc:* {description}"
     telegram_bot_sendtext(message)
 
 

@@ -116,11 +116,14 @@ def main():
         for coin_id in new_coins:
             if coin_id not in coin_store:
                 logger.info(f'Identifying new coin - {coin_id}')
-                coin_detail = cg.get_coin_by_id(coin_id)
-                coin_table.append(parsecoin(coin_detail))
-                coin_store.append(parsecoin(coin_detail, 'JSON'))
-                if config.enable_telegram:
-                    telegram_bot_sendcoin(coin_detail)
+                try:
+                    coin_detail = cg.get_coin_by_id(coin_id)
+                    coin_table.append(parsecoin(coin_detail))
+                    coin_store.append(parsecoin(coin_detail, 'JSON'))
+                    if config.enable_telegram:
+                        telegram_bot_sendcoin(coin_detail)
+                except Exception as e:
+                    logger.error(str(e))
                 time.sleep(float(config.delay))
 
         # Saving it for the next run
